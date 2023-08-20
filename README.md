@@ -4,6 +4,7 @@ Find a new name for your baby/pet/plant with this simple react project. WIP.
 
 To run locally:
 `npm install`
+
 Then: 
 `npm run dev`
 
