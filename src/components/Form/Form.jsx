@@ -1,64 +1,15 @@
 import React from 'react'
+import Honorific from '../Honorific'
+import Suffix from '../Suffix'
+import Selector from '../Selector'
 
 function Form () {
-
-  const [ selectedOption, setSelectedOption] = React.useState('');
-
   return (
-    <form>
-      <fieldset>
-        <label>
-          Select an honorific: <br />
-        </label>
-        
-        <select
-          value={selectedOption}
-          onChange={event => {
-            setSelectedOption(event.target.value)
-          }}
-        >
-          <option value="Their royal highness">
-            Their royal highness
-          </option>
-          <option value="Doctor">
-            Doctor
-          </option>
-          <option value="Professor">
-            Professor
-          </option>
-          <option value="Mx.">
-            Mx.
-          </option>
-          <option value="Mister">
-            Mister
-          </option>
-          <option value="Madame">
-            Madame
-          </option>
-          <option value="The Illustrious">
-            The Illustrious
-          </option>
-          <option value="The Right Honorable">
-            The Right Honorable
-          </option>
-          <option value="Their Majesty">
-            Their Majesty
-          </option>
-          <option value="Duke">
-            Duke
-          </option>
-          <option value="Dutchess">
-            Dutchess
-          </option>
-        </select>
-      </fieldset>
-      
-      <p>
-        Selected value:
-        <br />
-        {selectedOption}
-      </p>
-    </form>
+    <>
+      <Honorific />
+      <Selector />
+      <Suffix />
+    </>
   )
 }
 
