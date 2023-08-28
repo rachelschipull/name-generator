@@ -1,3 +1,5 @@
+//startup names data for randomizer
+
 let names = [
     "Jira",
     "Asana",
