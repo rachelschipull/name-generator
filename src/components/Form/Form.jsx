@@ -7,13 +7,15 @@ import Footer from '../Footer'
 
 function Form () {
   return (
-    <>
-      <Header />
-      <Honorific />
-      <Selector />
-      <Suffix />
-      <Footer />
-    </>
+    <div className="w-screen h-screen">
+        <Header />
+          <div className="flex justify-center justify-between px-40 w-100">
+            <Honorific />
+            <Selector />
+            <Suffix />
+          </div>
+        <Footer />
+    </div>
   )
 }
 

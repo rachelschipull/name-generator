@@ -12,6 +12,7 @@ function Selector () {
         </label>
         
         <select
+          className='select select-primary w-full max-w-xs'
           value={selectedOption}
           onChange={event => {
             setSelectedOption(event.target.value)
