@@ -1,8 +1,6 @@
 import React from 'react'
 
-function Suffix () {
-
-  const [ selectedOption, setSelectedOption] = React.useState('');
+function Suffix ({onSuffChange}) {
 
   return (
     <form>
@@ -13,9 +11,8 @@ function Suffix () {
         
         <select
           className='select select-primary w-full max-w-xs'
-          value={selectedOption}
           onChange={event => {
-            setSelectedOption(event.target.value)
+            onSuffChange(event.target.value)
           }}
         >
           <option value="I">
@@ -48,11 +45,6 @@ function Suffix () {
         </select>
       </fieldset>
       
-      <p>
-        Selected value:
-        <br />
-        {selectedOption}
-      </p>
     </form>
   )
 }

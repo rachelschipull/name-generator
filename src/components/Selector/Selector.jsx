@@ -1,8 +1,6 @@
 import React from 'react'
 
-function Selector () {
-
-  const [ selectedOption, setSelectedOption] = React.useState('2');
+function Selector ({onSelectChange}) {
 
   return (
     <form>
@@ -13,9 +11,8 @@ function Selector () {
         
         <select
           className='select select-primary w-full max-w-xs'
-          value={selectedOption}
           onChange={event => {
-            setSelectedOption(event.target.value)
+            onSelectChange(event.target.value)
           }}
         >
           <option value='1'>
@@ -30,11 +27,6 @@ function Selector () {
         </select>
       </fieldset>
       
-      <p>
-        Selected value:
-        <br />
-        {selectedOption}
-      </p>
     </form>
   )
 }

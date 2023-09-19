@@ -1,8 +1,6 @@
 import React from 'react'
 
-function Honorific () {
-
-  const [ selectedOption, setSelectedOption] = React.useState('');
+function Honorific ({onDataChange}) {
 
   return (
     <form>
@@ -13,9 +11,8 @@ function Honorific () {
         
         <select
           className='select select-primary w-full max-w-xs'
-          value={selectedOption}
           onChange={event => {
-            setSelectedOption(event.target.value)
+            onDataChange(event.target.value)
           }}
         >
           <option value="Their royal highness">
@@ -54,11 +51,11 @@ function Honorific () {
         </select>
       </fieldset>
       
-      <p>
+      {/* <p>
         Selected value:
         <br />
-        {selectedOption}
-      </p>
+        {selectedHonor}
+      </p> */}
     </form>
   )
 }
