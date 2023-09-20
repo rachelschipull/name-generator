@@ -51,11 +51,6 @@ function Honorific ({onDataChange}) {
         </select>
       </fieldset>
       
-      {/* <p>
-        Selected value:
-        <br />
-        {selectedHonor}
-      </p> */}
     </form>
   )
 }

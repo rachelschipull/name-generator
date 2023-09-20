@@ -3,7 +3,6 @@ import Honorific from '../Honorific'
 import Suffix from '../Suffix'
 import Selector from '../Selector'
 import Header from '../Header'
-import Footer from '../Footer'
 
 function Form () {
   const [data, setData] = useState('')
@@ -24,13 +23,14 @@ function Form () {
   return (
     <div className="w-screen h-screen">
         <Header />
-          <div className="flex justify-center justify-between px-40 w-100">
+          <div className="flex justify-center justify-between px-40 w-100 m-5">
             <Honorific onDataChange={handleHonorChange}/>
             <Selector onSelectChange={handleSelectChange}/>
             <Suffix onSuffChange={handleSuffChange}/>
           </div>
-          <p>{data} {selectedNumber} {suffData}</p>
-        <Footer />
+          <div className="flex justify-center mb-5">
+            <p>{data} {selectedNumber} {suffData}</p>
+          </div>
     </div>
   )
 }
